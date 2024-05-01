@@ -1,0 +1,6 @@
+@CRUDForMySQLWithEFCore_HostAddress = http://localhost:5114
+
+GET {{CRUDForMySQLWithEFCore_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
