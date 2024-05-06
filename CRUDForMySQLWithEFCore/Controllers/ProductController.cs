@@ -17,7 +17,7 @@ namespace CRUDForMySQLWithEFCore.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddProducts(Products products)
+        public async Task<IActionResult> AddProducts(Product products)
         {
             dbContext.Products.Add(products);
             await dbContext.SaveChangesAsync();
