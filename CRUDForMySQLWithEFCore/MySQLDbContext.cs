@@ -19,15 +19,8 @@ namespace CRUDForMySQLWithEFCore
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new ProductConfig());
-        }
-
-        class ProductConfig : IEntityTypeConfiguration<Product>
-        {
-            public void Configure(EntityTypeBuilder<Product> builder)
-            {
-                builder.ToTable("Product");
-                builder.Property(x => x.ProductName).HasColumnName(nameof(Product.ProductName));
-            }
+            modelBuilder.ApplyConfiguration(new OrderConfig());
+            modelBuilder.ApplyConfiguration(new OrderDetailConfig());
         }
     }
 }
